@@ -1,0 +1,79 @@
+npm create vite@latest ./ -- --template react
+
+npm i bootstrap
+
+npm i react-router-dom
+npm i react-icons
+
+npm i react-helmet
+
+npm i react-toastify
+npm i axios
+
+npm i react-hot-toast
+
+$ npm install antd --save
+
+npm install braintree-web-drop-in-react
+
+npm i moment
+
+npm run build
+
+
+------------------------------------
+to fix the problem of proxy and .env=> go to vite.config =>
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8080",
+        secure: false,
+      },
+    },
+  },
+  plugins: [react()],
+});
+
+----------------------------------------------
+notes for SEO =>
+npm i react-helmet
+edit Layout.jsx =>
+/*
+import Header from "./Header";
+import Footer from "./Footer";
+import { Helmet } from "react-helmet";
+
+const Layout = ({ children, title, description, keywords, author }) => {
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content={author} />
+        <title>{title}</title>
+      </Helmet>
+      <Header />
+      <main style={{ minHeight: "78vh" }}>{children}</main>
+      <Footer />
+    </>
+  );
+};
+
+Layout.defaultProps = {
+  title: "E-Commerce App. - shop now",
+  description: "mern stack project",
+  keywords: "mern, react, node, mongodb",
+  author: "MEO Tech",
+};
+
+export default Layout;
+*/
+
+----------------------------------
+npm i axios 

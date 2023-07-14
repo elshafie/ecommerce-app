@@ -1,0 +1,15 @@
+npm i express colors mongoose cors dotenv morgan bcrypt jsonwebtoken
+
+//globally
+npm i -g nodemon
+
+npm i concurrently cors
+
+npm i slugify
+
+npm i express-formidable
+
+npm install braintree
+
+// install in client folder
+npm install braintree-web-drop-in-react
