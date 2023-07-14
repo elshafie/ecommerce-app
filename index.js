@@ -23,7 +23,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname,'../client/dist')))
+app.use(express.static(path.join(__dirname,'./client/dist')))
 
 //routes =>
 app.use("/api/v1/auth", authRoutes);
@@ -35,7 +35,7 @@ app.use("/api/v1/product", productRoute);
 //   res.send("<h1>Welcome to E-commerce app</h1>");
 // });
 app.use('*', function(req,res) {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+  res.sendFile(path.join(__dirname, './client/dist/index.html'))
 })
 
 //port
